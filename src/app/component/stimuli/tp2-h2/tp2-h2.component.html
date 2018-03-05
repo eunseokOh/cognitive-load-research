@@ -1,0 +1,59 @@
+<div style="width: 100%; height: 100%; padding:5px; display: table;" align="center">
+    <div class="question-number" align="left" style="visibility: hidden;">
+      문제 4번
+    </div>
+    <div class="main-question" align="left">
+      <div style="visibility: hidden;">
+          다음은 국제회의 참석차 미국 뉴욕으로 출발한 각국 대표단의 출발지 기준 이륙시각, 비행시간, 동일시점에서의 각 국의 현지시각을 나타낸 자료이다. <br>각 국 대표단이 뉴욕에 도착한 순서를 바르게 나타낸 것은?
+      </div>
+      <div class="question-box" align="center">
+        <figure style="width: 30%; margin-right: 3%; visibility: hidden;">
+          <img src="/assets/img/tp2-l-1.png" >
+          <figcaption>&lt;표&gt;각 국 대표단의 비행 스케줄</figcaption>
+        </figure>
+        <figure style="width: 45%;">
+            <img src="/assets/img/tp2-l-2.png">
+            <figcaption>&lt;그림&gt;동일시점에서의 각 국의 현지시각</figcaption>
+          </figure>
+  
+      </div>
+  
+      <form id="h-form" (change)="changevalue($event)" style="margin-top:50px;">
+          <div >
+      
+              <input type="radio" name="exam" value="1" >&nbsp;① 인도 – 독일 – 대한민국
+       
+          </div>
+          <div >
+      
+              <input type="radio" name="exam" value="2" >&nbsp;② 인도 – 대한민국 – 독일
+  
+       
+          </div>
+          <div >
+        
+              <input type="radio" name="exam" value="3" >&nbsp;③ 대한민국 – 독일 – 인도
+     
+          </div>
+          <div >
+        
+              <input type="radio" name="exam" value="4" >&nbsp;④ 대한민국 – 인도 – 독일
+
+          </div>
+          <div >
+            
+                <input type="radio" name="exam" value="5" >&nbsp;⑤ 독일 – 대한민국 – 인도
+             
+            </div>
+        </form>
+  </div>
+
+  <div style="position: fixed; right:0px; top: 0px; outline: 1px gray; background: rgba(127,127,127,.15); width:12px; height: 100%;" (click)="moveH1()">
+      <div style="position: fixed; top:0px; right:0px; height: 15px; width:12px;  ">
+        <span class="material-icons" style="font-size: 12px;">arrow_drop_up</span>
+      </div>
+      <div style="position: fixed; bottom:0px; right:0px; height: 15px;  width:12px; height: 50%; background: gray;">
+        <span class="material-icons" style="font-size: 12px; position: fixed; bottom: 1px; right: 0px;">arrow_drop_down</span>
+      </div>
+    </div>
+</div>

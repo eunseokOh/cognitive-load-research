@@ -1,1 +1,157 @@
 /* You can add global styles to this file, and also import other style files */
+@CHARSET "UTF-8";
+@font-face{font-family: 'gyeonmyeongjo'; src:url('assets/font/gyeonmyeongjo.eot')}
+@font-face{font-family: 'gyeonmyeongjo'; src:url('assets/font/gyeonmyeongjo.woff')}
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+body, html{
+	width:100%;
+	height:100%;
+	overflow: hidden;
+    background-color: rgb(252,251,227);
+    font-family: 'gyeonmyeongjo';
+}
+
+.btn-default{
+    background-color: rgb(252,251,227);
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24),0 17px 45px 0 rgba(0,0,0,0.19);
+    border: 2px solid #e7e7e7;
+    color : rgb(252,251,227);
+    border-radius: 0px;
+    font-size: 2rem;
+}
+.btn-default:focus, .btn-default:visited{
+    background-color: none !important;
+    outline: 1px rgb(127,127,127) !important;
+    border: 2px solid rgba(127,127,127,.8);
+}
+
+.btn-default:hover{
+    color : rgb(252,251,227) !important;
+    background: rgba(127,127,127,.8) !important;
+}
+.active{
+    background: rgb(127,127,127) !important;
+    color : rgb(252,251,227) !important;
+}
+
+#contents{
+	height:75%;
+    width: 100%;
+   
+}
+.mat-radio-button.mat-accent .mat-radio-inner-circle{
+    background-color: gray !important;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+    border-color: gray !important;
+}
+#inner-contents{
+     position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%);  background-color: rgb(252,251,227); 
+}
+
+.inner-contents-full-screen{
+    height: 100vh;  width: 100vw; z-index: 99;
+}
+
+.inner-contents-screen{
+    height: 36.5625vw;  width: 65vw;
+    
+}
+
+.app-footer{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+}
+
+.mat-dialog-container{
+
+    background-color: rgb(252,251,227);
+
+}
+
+.main-question{
+    width: 100%;   font-size: 2rem;
+    padding: 10px;
+    clear: both;
+}
+
+.main-question > form {
+    margin-top: 30px;
+    
+}
+
+.question-box{
+    border: 1px solid rgba(127,127,127,.3);  margin-top:30px ; width:100%;  height: 100%; 
+    padding : 7px;
+    font-size: 1.8rem;
+   
+   
+}
+
+.question-box > ul{
+    padding: 10px 0px 10px 25px ;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.question-box > ul > li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.question-number{
+    width: auto;  background: rgb(127,127,127); color:rgb(252,251,227); padding:5px; font-size: 1.5rem;
+    text-align: center;
+    float: left;
+}
+
+.test-question-number{
+    width: auto; position: absolute; background: rgb(127,127,127); color:rgb(252,251,227); padding:5px; font-size: 1.5rem;
+}
+
+.test-question-box{
+    width: auto; position:absolute; top : 55px; padding-left: 7px; font-size: 2rem;
+}
+
+
+figure {
+    margin: 10px; /* adjust as needed */
+    display: inline-block;
+    vertical-align: top;
+}
+figure img {
+    width:100%;
+}
+figure figcaption {
+    margin-top:2px;
+    text-align: center;
+}
+
+.form-control:focus{
+    border-color: rgb(127,127,127) !important;
+}
+
+
+.exam-form > div:not(:last-child){
+    margin-bottom: 7px;
+}
+
+.number-card{
+    border: 1px solid; width: 60px; height: 100px; display: inline-block; text-align: center; 
+}
+
+.ipt-number-card{
+    background:transparent; 
+    display: inline-block;
+    width: 60px; height: 100px;
+    text-align: center; 
+    border: none;
+    font-size: 2rem;
+}
+
+.box-number-card:not(:last-child){
+    margin-right:50px;
+}

@@ -1,20 +1,42 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<app-header [alertMsg]="alertMsg" [style.visibility]="showHeader ? 'visible':'hidden'" ></app-header>
+<div id="contents" align="center" style="position: relative;">
+        <!-- [style.border]="showBorder ? '1px solid rgba(127,127,127,.5)' : 'none'" -->
+    <div id="inner-contents" [style.border]="showBorder ? '1px solid gray' : 'none'" class="inner-contents-screen" >
+        <router-outlet (activate)='onActivate($event)' (deactivate)="onDeActivate($event)"></router-outlet>
+        <div align="left" *ngIf="showTestPg" >
+            <ul class="pagination" >
+                <li><a class="pg-a" id="N1" (click)="movePage('/test-N1')">N1</a></li>
+                <li><a class="pg-a" id="N2" (click)="movePage('/test-N2')">N2</a></li>
+                <li><a class="pg-a" id="L1" (click)="movePage('/test-L1')">L1</a></li>
+                <li><a class="pg-a" id="L2" (click)="movePage('/test-L2')">L2</a></li>
+                <li><a class="pg-a" id="C1" (click)="movePage('/test-C1')">C1</a></li>
+                <li></li>
+                <li><a class="pg-a" id="C2" (click)="movePage('/test-C2')">C2</a></li>
+            </ul>
+        </div>
 
+        <div align="left" *ngIf="showStimuliPg">
+
+            <ul class="pagination" *ngIf="showL">
+                        <li><a class="pg-a" style="cursor: default;">E/H : </a></li>
+                        <li><a class="pg-a" id="TO-L" (click)="movePage('/stimuli-TO1-L')">TO_L</a></li>
+                        <li><a class="pg-a" id="TP-L" (click)="movePage('/stimuli-TP1-L')">TP_L</a></li>
+                        <li><a class="pg-a" id="PO-L" (click)="movePage('/stimuli-PO1-L')">PO_L</a></li>
+            </ul>
+            <ul class="pagination" *ngIf="!showL">
+                <li><a class="pg-a" style="cursor: default;">E/H : </a></li>
+                <li><a class="pg-a" id="TO-H" (click)="movePage('/stimuli-TO1-H')">TO_H</a></li>
+                <li><a class="pg-a" id="TP-H" (click)="movePage('/stimuli-TP1-H')">TP_H</a></li>
+                <li><a class="pg-a" id="PO-H" (click)="movePage('/stimuli-PO1-H')">PO_H</a></li>
+            </ul>
+
+ 
+        </div>
+
+    </div>
+</div>
+<div class="app-footer">
+        <mat-icon style="color:rgba(200,200,200,.5); font-size: 5rem; float: left; cursor: pointer; margin-left: 10%;" (click)="warning()" [style.visibility]="showWarning ? 'visible':'hidden'" >warning</mat-icon>
+        <button *ngIf="showNextBtn" mat-raised-button  style="font-size: 2rem; padding: 0px 30px 0px 30px; float: right; margin-right: 10%;  background: rgb(127,127,127); color:rgb(252,251,227); font-family: 'gyeonmyeongjo';" (click)="nextPage()">다음으로</button>
+
+</div>

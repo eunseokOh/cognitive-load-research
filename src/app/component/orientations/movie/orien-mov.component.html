@@ -1,0 +1,11 @@
+<video id="orien-video" style="z-index: -1;" height="100%;" preload="true">
+    <source src="/assets/mov/orien.mp4"
+        type="video/mp4">
+</video>
+<div style="z-index: 1; height: 100%; width: 100%; position: absolute; top: 0; left: 0;" (click)="showVideoCtr($event); $event.stopPropagation();">
+    <div [hidden]="!btnPlayPause">
+            <i class="material-icons" style="font-size: 100px; position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); cursor: pointer;"
+        (click)="playPauseVideo($event); $event.stopPropagation();">play_circle_filled</i>
+    </div>
+
+</div>

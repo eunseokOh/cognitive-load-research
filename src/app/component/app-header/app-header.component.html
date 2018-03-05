@@ -1,0 +1,26 @@
+<!-- <mat-tab-group>
+    <mat-tab label="오리엔테이션"><a [routerLink]="['/orien-mov']">Hello</a></mat-tab>
+    <mat-tab label="Tab 2">Content 2</mat-tab>
+</mat-tab-group> -->
+
+<!-- <mat-tab-group>
+    <mat-tab label="오리엔테이션"></mat-tab>
+    <mat-tab label="기기 착용"></mat-tab>
+    <mat-tab label="기저반응 측정"></mat-tab>
+    <mat-tab label="기본 검사"></mat-tab>
+    <mat-tab label="본 검사"></mat-tab>
+  </mat-tab-group> -->
+
+
+
+
+<div class="btn-group btn-group-justified">
+    <div class="btn-group" *ngFor="let tab of tabs">
+        <button type="button"  (click)="pageMove(tab.path);" [ngClass]="tab.cssClass">{{tab.label}}</button>
+    </div>
+</div>
+<div  id="notice" align="center"  [style.visibility]="alertMsg != 'null'? 'visible':'hidden'" >
+    <div class="alert" id="innerNotice" >
+    {{alertMsg}}
+  </div>
+</div>
